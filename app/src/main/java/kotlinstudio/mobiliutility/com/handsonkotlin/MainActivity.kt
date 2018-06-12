@@ -17,7 +17,5 @@ class MainActivity : AppCompatActivity() {
 
         val user = User("Kuma", 23)
         mainBinding.user = user;
-        //binding.setVariable(BR.user, user)
-        //binding.executePendingBindings()
     }
 }
