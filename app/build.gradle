@@ -17,8 +17,15 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
-        release {
+        /*debug {
+            buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/\""
             minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationIdSuffix ".debug"
+        }*/
+        release {
+            buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/\""
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -42,6 +49,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     kapt "com.android.databinding:compiler:$gradle_version"
     implementation 'com.jakewharton.timber:timber:4.7.0'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

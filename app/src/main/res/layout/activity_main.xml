@@ -19,24 +19,11 @@
         tools:context="com.kuma.sample.MainActivity"
         >
 
-        <TextView
-            android:id="@+id/user_name_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="@{user.name}"
-            tools:text="Name"
-            />
 
-        <TextView
-            android:id="@+id/user_age_text_view"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_animal_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="@{Integer.toString(user.age)}"
-            tools:text="XX"
-            />
-
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 </layout>
